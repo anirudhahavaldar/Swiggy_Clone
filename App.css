@@ -1,3 +1,7 @@
+* {
+  font-family: Poppins, sans-serif;
+}
+
 .logo {
   width: 200px;
 }
@@ -27,9 +31,9 @@ body {
 }
 
 .res-card {
-  width: 250px;
-  padding: 5px;
-  flex: 0 1 calc(20% - 1px); /* Adjust the percentage and margin as needed */
+  width: 170px;
+  /* padding: 5px; */
+  /* flex: 0 1 calc(20% - 1px); /* Adjust the percentage and margin as needed */
 }
 
 .res-card:hover {
@@ -51,4 +55,16 @@ body {
 p {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+#top-restaurants {
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #a1a1a1;
+  cursor: pointer;
+  border: none;
+}
+
+#top-restaurants:hover {
+  background-color: #e4d0d0;
 }
