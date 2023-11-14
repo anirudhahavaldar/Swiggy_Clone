@@ -96,3 +96,8 @@ p {
   padding: 10px 5px;
   margin-left: 20px;
 }
+
+.user-card {
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
