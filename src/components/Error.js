@@ -15,7 +15,7 @@ const Error = () => {
         src="https://media.giphy.com/media/GFHJXPCoVQEec/giphy.gif"
         alt=""
       />
-      <h1>Oops!!! {err.error.message}</h1>
+      <h1>Oops!!! Something Went wromng</h1>
       <h2>Something went wrong!</h2>
     </div>
   );

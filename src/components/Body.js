@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
+import useOnlineStatus from '../utils/useOnlineStatus';
 
 export const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -30,11 +31,17 @@ export const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) {
+    return <h1>Looks like you are offline!</h1>;
+  }
+
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
-    <div>
-      <div className="search" onClick={() => {}}>
+    <div className="container mx-auto">
+      <div className="search mt-6" onClick={() => {}}>
         <input
           type="text"
           onChange={(e) => {
@@ -66,7 +73,7 @@ export const Body = () => {
           Top Restaurants
         </button>
       </div>
-      <div className="restaurant-container">
+      <div className="flex flex-wrap">
         {filteredRestaurant.map((res) => (
           <Link key={res.info.id} to={'/restaurants/' + res.info.id}>
             <RestaurantCard resData={res} />
